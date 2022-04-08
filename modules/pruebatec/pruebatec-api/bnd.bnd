@@ -1,0 +1,10 @@
+Bundle-Name: pruebatec-api
+Bundle-SymbolicName: com.sinensia.pruebatec.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.sinensia.pruebatec.exception,\
+	com.sinensia.pruebatec.model,\
+	com.sinensia.pruebatec.service,\
+	com.sinensia.pruebatec.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../pruebatec-service/service.xml

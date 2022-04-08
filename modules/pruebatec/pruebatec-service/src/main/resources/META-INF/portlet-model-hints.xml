@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sinensia.pruebatec.model.UserPrueba">
+		<field name="uuid" type="String" />
+		<field name="userId" type="long" />
+		<field name="name" type="String" />
+		<field name="familyName" type="String" />
+		<field name="birthDate" type="Date" />
+		<field name="email" type="String" />
+		<field name="regDate" type="Date" />
+	</model>
+</model-hints>

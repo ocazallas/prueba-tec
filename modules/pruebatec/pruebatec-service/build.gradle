@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:pruebatec:pruebatec-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../pruebatec-api/src/main/java"
+}
+
+group = "com.sinensia.pruebatec"

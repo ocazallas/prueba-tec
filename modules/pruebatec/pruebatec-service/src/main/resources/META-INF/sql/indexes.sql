@@ -1,0 +1,1 @@
+create index IX_31D7C3B8 on ricoh_UserPrueba (uuid_[$COLUMN_LENGTH:75$]);

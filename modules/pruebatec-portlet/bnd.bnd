@@ -1,0 +1,4 @@
+Bundle-Name: pruebatec-portlet
+Bundle-SymbolicName: com.ricoh.pruebatec
+Bundle-Version: 1.0.0
+Export-Package: com.ricoh.pruebatec.constants
