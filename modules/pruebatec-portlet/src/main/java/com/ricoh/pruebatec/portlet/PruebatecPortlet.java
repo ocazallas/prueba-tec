@@ -16,6 +16,7 @@ import com.sinensia.pruebatec.service.UserPruebaLocalServiceUtil;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.mail.internet.InternetAddress;
 import javax.portlet.ActionRequest;
@@ -23,6 +24,8 @@ import javax.portlet.ActionResponse;
 import javax.portlet.Portlet;
 import javax.portlet.PortletException;
 import javax.portlet.ProcessAction;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
 
@@ -64,7 +67,7 @@ public class PruebatecPortlet extends MVCPortlet {
 			System.out.println("CAPTCHA verification successful.");
 			System.out.println(name + familyName + email + birthDate + date);
 			sendMail(email);
-			UserPruebaLocalServiceUtil.addUserPrueba(userPrueba);
+			// UserPruebaLocalServiceUtil.addUserPrueba(userPrueba);
 		} catch (Exception exception) {
 			if (exception instanceof CaptchaTextException) {
 				SessionErrors.add(actionRequest, exception.getClass(), exception);
@@ -72,6 +75,15 @@ public class PruebatecPortlet extends MVCPortlet {
 			}
 		}
 
+	}
+
+	@Override
+	public void render(RenderRequest renderRequest, RenderResponse renderResponse)
+			throws java.io.IOException, PortletException {
+
+		List<UserPrueba> users = UserPruebaLocalServiceUtil.getUserPruebas(-1, -1);
+		renderRequest.setAttribute("users", users);
+		super.render(renderRequest, renderResponse);
 	}
 
 	@Override
