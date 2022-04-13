@@ -13,7 +13,9 @@
 
  
 body {
+	
 	header {
+		
 		.field-wrapper {
 			position: absolute;
 			right: 4px;
@@ -35,6 +37,7 @@ body {
 			&:hover {
 				z-index: 1034;
 			}
+			
 		}
 
 		.search-input {
@@ -106,3 +109,7 @@ nav {
 	display:none;
 
 }
+#main-content {
+	background-color: yellow;
+}
+

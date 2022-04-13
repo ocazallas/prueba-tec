@@ -4,6 +4,7 @@
 	</button>
 
 	<div class="collapse navbar-collapse" id="navigationCollapse">
-		<@liferay.navigation_menu default_preferences="${preferences}" />
+		<@liferay.languages default_preferences="${preferences}" />
 	</div>
+	
 </#if>
